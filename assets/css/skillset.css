@@ -1,52 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-$red: #fd7473;
-$yellow: #fec951;
-$blue: #47b8e0;
-$purp: #9f68d0;
-
-body{
-  background: #1F1E24;
-  height: 200px;
-  font-family: 'Open Sans', sans-serif;
+ body {
+	 background: #1f1e24;
+	 height: 200px;
+	 font-family: 'Open Sans', sans-serif;
 }
-
-.wrapper{
-  margin: 0 auto;
-  width: 90%;
-  margin-top: 15px;
+ .wrapper {
+	 margin: 0 auto;
+	 width: 90%;
+	 margin-top: 15px;
 }
-
-.bar{
-  position: relative;
-  width: 100%;
-  height: 48px;
-  background: rgba(255,255,255,0.1);
-  margin-bottom: 1.5rem;
-  border-radius: 5px;
-  .bar-info{
-    border-radius: 5px;
-    padding: 0.75rem;
-    background: $red;
-    color: white;
-    width: 10%;
-    position: relative;
-    height: 24px;
-    transition: width 3.3s ease-in-out;
-    .percent{
-      float: right;
-    }
-    &.html{
-      background: linear-gradient($red, #FC688E), $red;
-    }
-    &.xd{
-      background: linear-gradient($yellow, #FCAD44), $yellow;
-    }
-    &.cpp{
-      background: linear-gradient($blue, #28BEFA), $blue;
-    }
-    &.py{
-      background: linear-gradient($purp, #BB68D0), $purp;
-    }
-  }
+ .bar {
+	 position: relative;
+	 width: 100%;
+	 height: 48px;
+	 background: rgba(255, 255, 255, 0.1);
+	 margin-bottom: 1.5rem;
+	 border-radius: 5px;
 }
+ .bar .bar-info {
+	 border-radius: 5px;
+	 padding: 0.75rem;
+	 background: #fd7473;
+	 color: white;
+	 background-color: blue;
+	 width: 10%;
+	 position: relative;
+	 height: 100%;
+	 transition: width 3.3s ease-in-out;
+}
+ .bar .bar-info .percent {
+   float: right;
+   position: absolute;
+   top: 25%;
+   left: calc(100% - 50px);
+   
+   overflow: hidden;
+}
+ .bar .bar-info.html {
+	 background: linear-gradient(#fd7473, #fc688e), #fd7473;
+}
+ .bar .bar-info.xd {
+	 background: linear-gradient(#fec951, #fcad44), #fec951;
+}
+ .bar .bar-info.cpp {
+	 background: linear-gradient(#47b8e0, #28befa), #47b8e0;
+}
+ .bar .bar-info.py {
+	 background: linear-gradient(#9f68d0, #bb68d0), #9f68d0;
+}
+ 
